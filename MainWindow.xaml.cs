@@ -28,6 +28,11 @@ namespace VolumeController
 
         }
 
-        
+        private void SetKbShortcuts_button_Click(object sender, RoutedEventArgs e)
+        {
+            KeyboardShortcutsWindow keyboardShortcutsWindow = new KeyboardShortcutsWindow();
+            keyboardShortcutsWindow.Owner = this;
+            keyboardShortcutsWindow.ShowDialog();
+        }
     }
 }
