@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VolumeController"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="300" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
 
-        <TabControl Margin="10" BorderBrush="Black" Cursor="Arrow" >
+        <TabControl BorderBrush="Black" Cursor="Arrow" >
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="Template">
@@ -24,7 +24,7 @@
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
                                         <Setter TargetName="Border" Property="Background" Value="White" />
-                                        <Setter TargetName="Border" Property="BorderBrush" Value="black"/>
+                                        <Setter TargetName="Border" Property="BorderBrush" Value="Black"/>
                                         <Setter TargetName="Border" Property="BorderThickness" Value="2"/>
                                     </Trigger>
                                     <Trigger Property="IsSelected" Value="False">
@@ -36,25 +36,111 @@
                     </Setter>
                 </Style>
             </TabControl.Resources>
-            <TabItem Header="General">
-                <Label Content="Content goes here..." />
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\DG\Desktop\ikonki\sound.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0"/>
+                        <TextBlock Text="Sterowanie" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                    <Button Padding="5" Width="100" Height="100" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,30,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\DG\Desktop\ikonki\minus.png" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\DG\Desktop\ikonki\sound.png" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,60,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\DG\Desktop\ikonki\plus.png" />
+                        </StackPanel>
+                    </Button>
+
+                    <Label Content="Poziom glosnosci:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,120,0,0" FontSize="20"/>
+
+
+
+                </Grid>
+
             </TabItem>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="C:\Users\DG\Desktop\sett.png" Height="15" Width="15" Margin="-40,0,0,0" />
+                        <Image Source="C:\Users\DG\Desktop\ikonki\sett.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0" />
                         <TextBlock Text="Ustawienia" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </StackPanel>
                 </TabItem.Header>
+                <!-- skroty klawiaturowe: glosniej/ciszej/wycisz/przywolaj okno, skok, start z systemem, w zasobniku -->
+                <Grid>
+
+
+
+
+                    <GroupBox Header="System" HorizontalAlignment="Left" Height="210" Margin="5,10,0,0" VerticalAlignment="Top" Width="330">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Label Content="Język" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Height="25"/>
+                            <ComboBox HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Width="150"/>
+                            
+                            <CheckBox Content="Minimalizuj do zasobnika systemowego" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" />
+                            <CheckBox Content="Pokaz male ruchome okno gdy zminimalizowany" Height="15" Margin="10,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  />
+                            <CheckBox Content="Uruchom przy starcie systemu" Height="15" Margin="10,80,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  />
+                            <CheckBox Content="Pokazuj powiedomienia" Height="15" Margin="10,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+                            <Label Content="Skok:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,117,0,0" Height="25"/>
+                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,140,0,0">5</RadioButton>
+                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,155,0,0">10</RadioButton>
+
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="Skroty klawiaturowe" Height="210" VerticalAlignment="Top" HorizontalAlignment="Right" Width="230" Margin="0,10,5,0" >
+                        <Grid>
+                            <CheckBox Content="Używaj skrótów globalnych" Width="170" Height="15" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  />
+                            <Button Padding="0" Width="80" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
+                                <StackPanel>
+                                    <Image Source="C:\Users\DG\Desktop\ikonki\keyboard.png" Width="70" Height="40" />
+                                    <TextBlock Margin="0,0">Ustaw skróty</TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                        </Grid>
+
+                        <!--<ListView Margin="10" Name="lvUsers">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Funkcja" Width="190" DisplayMemberBinding="{Binding Name}" />
+                                    <GridViewColumn Header="Skrót" Width="100" DisplayMemberBinding="{Binding Age}" />
+                                </GridView>
+                            </ListView.View>
+                        </ListView>-->
+
+                    </GroupBox>
+
+                </Grid>
 
             </TabItem>
-            <TabItem Header="Details" />
-            
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\DG\Desktop\ikonki\question2.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0"/>
+                        <TextBlock Text="Szczególy" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+
+
+
 
         </TabControl>
 
 
-       
+
 
 
     </Grid>

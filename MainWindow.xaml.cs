@@ -25,8 +25,6 @@ namespace VolumeController
         {
             InitializeComponent();
 
-            VolumeManager vm = new VolumeManager();
-            vm.up();
 
         }
 

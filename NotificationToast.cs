@@ -42,12 +42,6 @@ namespace VolumeController
             
         }
 
-        public void uv(string tt)
-        {
-            _notifyIcon.BalloonTipText = tt;
-            _notifyIcon.Text = tt;
-        }
-        
 
     }
 }
