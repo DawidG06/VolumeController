@@ -39,26 +39,26 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="C:\Users\DG\Desktop\ikonki\sound.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0"/>
+                        <Image Source="/VolumeController;component/Resources/sound.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0"/>
                         <TextBlock Text="Sterowanie" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
                     <Button Padding="5" Width="100" Height="100" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,30,0,0" Command="{Binding VolumeTurnDown}">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="C:\Users\DG\Desktop\ikonki\minus.png" />
+                            <Image Source="/VolumeController;component/Resources/minus.png" />
                         </StackPanel>
                     </Button>
 
                     <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0" Command="{Binding VolumeMute}">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="C:\Users\DG\Desktop\ikonki\sound.png" />
+                            <Image Source="/VolumeController;component/Resources/sound.png" />
                         </StackPanel>
                     </Button>
 
                     <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,60,0" Command="{Binding VolumeTurnUp}">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="C:\Users\DG\Desktop\ikonki\plus.png" />
+                            <Image Source="/VolumeController;component/Resources/plus.png" />
                         </StackPanel>
                     </Button>
 
@@ -73,7 +73,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="C:\Users\DG\Desktop\ikonki\sett.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0" />
+                        <Image Source="/VolumeController;component/Resources/sett.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0" />
                         <TextBlock Text="Ustawienia" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </StackPanel>
                 </TabItem.Header>
@@ -107,7 +107,7 @@
                             <CheckBox Content="Używaj skrótów globalnych" Width="170" Height="15" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  />
                             <Button x:Name="SetKbShortcuts_button" Padding="0" Width="80" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" Click="SetKbShortcuts_button_Click">
                                 <StackPanel>
-                                    <Image Source="C:\Users\DG\Desktop\ikonki\keyboard.png" Width="70" Height="40" />
+                                    <Image Source="/VolumeController;component/Resources/keyboard.png" Width="70" Height="40" />
                                     <TextBlock Margin="0,0">Ustaw skróty</TextBlock>
                                 </StackPanel>
                             </Button>
@@ -124,7 +124,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="C:\Users\DG\Desktop\ikonki\question2.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0"/>
+                        <Image Source="/VolumeController;component/Resources/question2.png" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-28,0,0,0"/>
                         <TextBlock Text="Szczególy" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </StackPanel>
                 </TabItem.Header>
