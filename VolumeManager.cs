@@ -9,11 +9,35 @@ namespace VolumeController
 {
     class VolumeManager
     {
-        CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
-
-        public void up()
+        CoreAudioDevice coreAudioDevice;
+        public VolumeManager()
         {
-            defaultPlaybackDevice.ToggleMute();
+            coreAudioDevice = new CoreAudioController().DefaultPlaybackDevice;
+        }
+
+        public void VolumeUp(int jump)
+        {
+            coreAudioDevice.Volume += jump;
+        }
+
+        public void VolumeDown(int jump)
+        {
+            coreAudioDevice.Volume -= jump;
+        }
+
+        public void SetVolume(int level)
+        {
+            coreAudioDevice.Volume = level;
+        }
+
+        public void ToogleMute()
+        {
+            coreAudioDevice.ToggleMute();
+        }
+
+        public int CurrentLevel
+        {
+            get { return Convert.ToInt32(coreAudioDevice.Volume); }
         }
     }
 }

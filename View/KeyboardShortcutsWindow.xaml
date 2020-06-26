@@ -8,19 +8,19 @@
         Title="KeyboardShortcutsWindow" Height="235" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid>
-            <ListView Margin="10" Name="lvUsers" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center">
+            <ListView Margin="10" Name="lv" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" PreviewKeyDown="lv_PreviewKeyDown">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Funkcja" DisplayMemberBinding="{Binding Name}" Width="221" />
-                        <GridViewColumn Header="Skrót" DisplayMemberBinding="{Binding Age}" Width="150" />
+                        <GridViewColumn Header="Funkcja" DisplayMemberBinding="{Binding Function}" Width="221" />
+                        <GridViewColumn Header="Skrót" DisplayMemberBinding="{Binding Shortcut}" Width="150" />
                     </GridView>
                 </ListView.View>
             </ListView>
         </Grid>
 
         <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" Width="180">
-            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80"/>
-            <Button Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80"/>
+            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" IsDefault="True"/>
+            <Button Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" IsCancel="True"/>
         </Grid>
         
         

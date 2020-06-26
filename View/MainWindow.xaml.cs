@@ -24,7 +24,16 @@ namespace VolumeController
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
 
+            PathManager.Init();
+            //BasicSettings basicSettings = new BasicSettings();
+            //basicSettings.MinimalizeToSysTray = true;
+            //Settings settings = new Settings(basicSettings);
+
+            //var odcz = settings.Read();
+            //settings.Save();
+            //var odcz2 = settings.Read();
 
         }
 

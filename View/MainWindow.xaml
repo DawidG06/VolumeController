@@ -44,25 +44,26 @@
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
-                    <Button Padding="5" Width="100" Height="100" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,30,0,0">
+                    <Button Padding="5" Width="100" Height="100" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,30,0,0" Command="{Binding VolumeTurnDown}">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="C:\Users\DG\Desktop\ikonki\minus.png" />
                         </StackPanel>
                     </Button>
 
-                    <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">
+                    <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0" Command="{Binding VolumeMute}">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="C:\Users\DG\Desktop\ikonki\sound.png" />
                         </StackPanel>
                     </Button>
 
-                    <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,60,0">
+                    <Button Padding="5" Width="100" Height="100" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,60,0" Command="{Binding VolumeTurnUp}">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="C:\Users\DG\Desktop\ikonki\plus.png" />
                         </StackPanel>
                     </Button>
 
                     <Label Content="Poziom glosnosci:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,120,0,0" FontSize="20"/>
+                    <Label Content="{Binding CurrentVolumeLevel}" HorizontalAlignment="Left" Margin="220,120,0,0" VerticalAlignment="Center" FontSize="22"/>
 
 
 
@@ -86,15 +87,17 @@
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
                             <Label Content="Język" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Height="25"/>
                             <ComboBox HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Width="150"/>
-                            
-                            <CheckBox Content="Minimalizuj do zasobnika systemowego" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" />
+
+                            <CheckBox Content="Minimalizuj do zasobnika systemowego" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" IsChecked="{Binding MinToSysTray}"/>
                             <CheckBox Content="Pokaz male ruchome okno gdy zminimalizowany" Height="15" Margin="10,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  />
                             <CheckBox Content="Uruchom przy starcie systemu" Height="15" Margin="10,80,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  />
                             <CheckBox Content="Pokazuj powiedomienia" Height="15" Margin="10,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
 
                             <Label Content="Skok:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,117,0,0" Height="25"/>
-                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,140,0,0">5</RadioButton>
-                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,155,0,0">10</RadioButton>
+                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,140,0,0">2</RadioButton>
+                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,155,0,0">5</RadioButton>
+                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,140,0,0">10</RadioButton>
+                            <RadioButton GroupName="voljump" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,155,0,0">15</RadioButton>
 
                         </Grid>
                     </GroupBox>

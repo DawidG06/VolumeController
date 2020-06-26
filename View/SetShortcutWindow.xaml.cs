@@ -12,16 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace VolumeController
+namespace VolumeController.View
 {
     /// <summary>
-    /// Interaction logic for KeyboardShortcutsWindow.xaml
+    /// Interaction logic for SetShortcutWindow.xaml
     /// </summary>
-    public partial class KeyboardShortcutsWindow : Window
+    public partial class SetShortcutWindow : Window
     {
-        public KeyboardShortcutsWindow()
+        public SetShortcutWindow()
         {
             InitializeComponent();
         }
+
     }
 }
